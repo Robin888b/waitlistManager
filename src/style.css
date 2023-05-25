@@ -1,0 +1,70 @@
+@font-face {
+    font-family: regular;
+    src: url(./font/SourceCodePro-Regular.ttf);
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+body {
+    background-color: #1e2340;
+    color: #fff;
+}
+
+div, body, ::before, ::after {
+    margin: 0;
+    padding: 0;
+}
+#optionsBtn {
+    position: fixed;
+    margin: 20px;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+
+#optionsBtn path{
+    color: #fff;
+    background-color: #fff;
+}
+
+[data-optionDialog] div {
+    display: grid;  grid-template-rows: 30px auto;  grid-template-columns: auto 30px;  gap: 8px;
+}
+#optionTitle {
+    margin: auto;  grid-area: 1 / 1 / 2 / 2;
+}
+#closeOptionDialog {
+    padding: 5px;  grid-area: 1 / 2 / 1 / 2;
+}
+.flex {
+    display: flex;
+}
+#content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 95vh;
+    height: 100svh;
+    font-family: regular;
+}
+td {
+    text-align: center;
+    padding: 0 3vw ;
+}
+#content table tr:nth-child(1) {
+    font-size: 10vw;
+}
+#content table tr:nth-child(2) {
+    font-size: 15vw;
+}
+#content  td:nth-child(1) {
+    color: #d9b7f3;
+}#content  td:nth-child(2) {
+    color: #51bbfe;
+}
