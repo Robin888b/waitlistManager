@@ -54,6 +54,8 @@ function onTxCharacteristicValueChanged(event) {
   ticketNb += 1
   document.getElementById("ticketNb").innerHTML = ticketNb
   document.getElementById("terminalNb").innerHTML = receivedString
+  let msg = new SpeechSynthesisUtterance(`Ticket ${ticketNb} au guichet ${receivedString}`);
+  speechSynthesis.speak(msg);
   
 }
 
@@ -71,3 +73,6 @@ function updateTicketNb(){
   ticketNb = 2* document.getElementById("ticketNbInput").value /2
   document.getElementById("ticketNb").innerHTML = ticketNb
 }
+
+
+const synth = window.speechSynthesis;
